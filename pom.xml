@@ -126,4 +126,10 @@
             </plugin>
         </plugins>
     </build>
+    <scm>
+        <connection>scm:git:${project.scm.url}</connection>
+        <developerConnection>scm:git:${project.scm.url}</developerConnection>
+        <url>git@github.com:Ghassen95/spring-boot-thymeleaf.git</url>
+        <tag>HEAD</tag>
+    </scm>
 </project>
