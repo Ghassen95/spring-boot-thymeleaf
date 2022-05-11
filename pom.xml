@@ -124,12 +124,30 @@
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-maven-plugin</artifactId>
             </plugin>
+                <!-- maven release plugin -->
+            <plugin>
+                <artifactId>maven-release-plugin</artifactId>
+                <version>XXX</version>
+                <configuration>
+                    <scmCommentPrefix>[ci skip]</scmCommentPrefix>
+                 </configuration>
+            </plugin>
         </plugins>
     </build>
+
+
+<!-- Connection via ssh -->
     <scm>
         <connection>scm:git:${project.scm.url}</connection>
         <developerConnection>scm:git:${project.scm.url}</developerConnection>
         <url>git@github.com:Ghassen95/spring-boot-thymeleaf.git</url>
         <tag>HEAD</tag>
     </scm>
+    <distributionManagement>
+		<repository>
+		  <id>github</id>
+		  <name>GitHub Packages</name>
+		  <url>https://maven.pkg.github.com/Ghassen95/spring-boot-thymeleaf</url>
+		</repository>
+	</distributionManagement>
 </project>
