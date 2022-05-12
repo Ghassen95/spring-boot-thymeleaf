@@ -43,6 +43,6 @@ jobs:
         username: ${{ secrets.REGISTRY_USERNAME }}
         password: ${{ secrets.REGISTRY_PASSWORD }}
     - run: |
-        docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }}
-        docker image tag ${{ secrets.REGISTRY_LOGIN_SERVER }}/pfe-gitops-demo:${{ steps.project_version.outputs.PROJECT_VERSION }} ${{ secrets.REGISTRY_LOGIN_SERVER }}/pfe-gitops-demo:latest
-        docker push --all-tags ${{ secrets.REGISTRY_LOGIN_SERVER }}/pfe-gitops-demo
+        docker build . -t ${{ secrets.REGISTRY_LOGIN_SERVER }}/spring-boot-thymeleaf:${{ steps.project_version.outputs.PROJECT_VERSION }}
+        docker image tag ${{ secrets.REGISTRY_LOGIN_SERVER }}/spring-boot-thymeleaf:${{ steps.project_version.outputs.PROJECT_VERSION }} ${{ secrets.REGISTRY_LOGIN_SERVER }}/spring-boot-thymeleaf:latest
+        docker push --all-tags ${{ secrets.REGISTRY_LOGIN_SERVER }}/spring-boot-thymeleaf
