@@ -20,7 +20,7 @@ spec:
     spec:
       containers:
       - name: pfe-gitops-demo-app
-        image: gitops2.azurecr.io.azurecr.io/spring-boot-thymeleaf:latest
+        image: gitops2.azurecr.io/spring-boot-thymeleaf:latest
         imagePullPolicy: Always
         ports:
         - containerPort: 8080
