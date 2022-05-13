@@ -32,4 +32,4 @@ spec:
           limits:
             cpu: 200m
             memory: 300M
-      restartPolicy: Never
+      restartPolicy: Always
