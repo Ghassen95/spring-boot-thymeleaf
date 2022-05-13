@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Service
+metadata:
+  finalizers:
+  - service.kubernetes.io/load-balancer-cleanup
+  labels:
+    run: spring
+  name: spring
+  namespace: default
+spec:
+  allocateLoadBalancerNodePorts: true
+  externalTrafficPolicy: Cluster
+  internalTrafficPolicy: Cluster
+  ports:
+  - nodePort: 31834
+    port: 8080
+    protocol: TCP
+    targetPort: 8080
+  selector:
+    run: spring
+  sessionAffinity: None
+  type: LoadBalancer

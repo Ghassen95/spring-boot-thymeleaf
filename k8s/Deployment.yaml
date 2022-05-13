@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: pfe-gitops-demo
-  namespace: gitops
+  namespace: default
   labels:
     app: pfe-gitops-demo
     env: dev
