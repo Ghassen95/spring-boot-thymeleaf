@@ -1,25 +1,25 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: pfe-gitops-demo
+  name: spring
   namespace: default
   labels:
-    app: pfe-gitops-demo
+    app: spring
     env: dev
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: pfe-gitops-demo
+      app: spring
       env: dev
   template:
     metadata:
       labels:
-        app: pfe-gitops-demo
+        app: spring
         env: dev
     spec:
       containers:
-      - name: pfe-gitops-demo-app
+      - name: spring
         image: gitops2.azurecr.io/spring-boot-thymeleaf:latest
         imagePullPolicy: Always
         ports:
