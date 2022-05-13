@@ -4,7 +4,7 @@ metadata:
   finalizers:
   - service.kubernetes.io/load-balancer-cleanup
   labels:
-    run: spring
+    app: spring
   name: spring
   namespace: default
 spec:
@@ -17,6 +17,6 @@ spec:
     protocol: TCP
     targetPort: 8080
   selector:
-    run: spring
+    app: spring
   sessionAffinity: None
   type: LoadBalancer
