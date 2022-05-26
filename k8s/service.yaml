@@ -6,17 +6,16 @@ metadata:
   labels:
     app: spring
   name: spring
-  namespace: default
+  namespace: spring
 spec:
   allocateLoadBalancerNodePorts: true
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ports:
-  - nodePort: 31834
     port: 8080
     protocol: TCP
     targetPort: 8080
   selector:
     app: spring
   sessionAffinity: None
-  type: LoadBalancer
+  type: ClusterIP
