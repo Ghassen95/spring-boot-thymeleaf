@@ -2,7 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: spring
-  namespace: default
+  namespace: spring
   labels:
     app: spring
     env: dev
@@ -33,3 +33,5 @@ spec:
             cpu: 200m
             memory: 300M
       restartPolicy: Always
+      imagePullSecrets:
+      - name:  acr-pull-secret
