@@ -21,7 +21,7 @@ spec:
           service:
             name: spring
             port:
-              number: 8081
+              number: 8080
         path: /spring
         pathType: Prefix
   tls:
