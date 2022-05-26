@@ -12,6 +12,7 @@ spec:
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ports:
+  - nodePort: 31000
     port: 8080
     protocol: TCP
     targetPort: 8080
