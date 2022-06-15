@@ -26,10 +26,10 @@ spec:
       paths:
       - backend:
           service:
-            name: login
+            name: spring
             port:
               number: 8080
-        path: /spring
+        path: /login
         pathType: Prefix
   tls:
   - hosts:
