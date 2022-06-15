@@ -29,8 +29,10 @@ spec:
             name: spring
             port:
               number: 8080
-        path: /spring(.*)
+        path: /login
         pathType: Prefix
+
+
   tls:
   - hosts:
     - pfe-adactim-app.eastus.cloudapp.azure.com
