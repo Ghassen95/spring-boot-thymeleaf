@@ -32,7 +32,6 @@ spec:
         path: /login
         pathType: Prefix
 
-
   tls:
   - hosts:
     - pfe-adactim-app.eastus.cloudapp.azure.com
